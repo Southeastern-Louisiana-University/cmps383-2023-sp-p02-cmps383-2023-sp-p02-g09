@@ -5,7 +5,12 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SP23.P02.Web", "SP23.P02.Web\SP23.P02.Web.csproj", "{61304DBC-E059-494A-8FC0-745B3FB8DC34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SP23.P02.Tests.Web", "SP23.P02.Tests.Web\SP23.P02.Tests.Web.csproj", "{DC6906D5-25A4-45C3-AABC-A4EB991A4D0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SP23.P02.Tests.Web", "SP23.P02.Tests.Web\SP23.P02.Tests.Web.csproj", "{DC6906D5-25A4-45C3-AABC-A4EB991A4D0B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D0909FC1-26A4-4977-A1C1-61B8AC698694}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
