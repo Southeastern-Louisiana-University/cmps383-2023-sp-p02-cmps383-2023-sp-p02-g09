@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using SP23.P02.Web.Features.Auth;
@@ -28,6 +27,8 @@ namespace SP23.P02.Web.Controllers
             cfg.CreateMap<CreateUserDto, IdentityUser>();
             cfg.CreateMap<CreateUserDto, UserDto>();
             cfg.CreateMap<LoginDto, UserDto>();
+            cfg.CreateMap<IdentityRole, Role>();
+            
 
             MapperConfiguration config = new(cfg);
             mapper = config.CreateMapper();
