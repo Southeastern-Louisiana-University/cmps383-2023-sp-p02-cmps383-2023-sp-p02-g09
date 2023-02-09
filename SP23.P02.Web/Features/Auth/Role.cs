@@ -7,6 +7,6 @@ namespace SP23.P02.Web.Features.Auth
         public int UserId { get; set; }
         public string RoleName { get; set; }
         public string RoleDescription { get; set; } = string.Empty;
-        public virtual ICollection<User> Users { get; set; }
+        public virtual ICollection<UserRole> Roles { get; set; }
     }
 }
