@@ -38,11 +38,13 @@ namespace SP23.P02.Web.Controllers
         {
 
             var currentUser = await userManager.GetUserAsync(HttpContext.User);
+
             if (currentUser == null)
             {
                 return Unauthorized();
             }
-            if (!currentUser.Roles.Any(r => r.Role.Name == "Admin"))
+
+            if (!currentUser.Roles.Any(role => role.Equals("Admin")))
             {
                 return Unauthorized();
             }

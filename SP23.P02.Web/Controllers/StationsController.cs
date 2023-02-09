@@ -45,11 +45,22 @@ public class StationsController : ControllerBase
             return BadRequest();
         }
 
+        if (dto.Name.Length > 120)
+        {
+            return BadRequest();
+        }
+
+        if (dto.Address == null || dto.Address == "")
+        {
+            return BadRequest();
+        }
+
         var station = new TrainStation
         {
             Name = dto.Name,
             Address = dto.Address,
         };
+
         stations.Add(station);
 
         dataContext.SaveChanges();
@@ -64,6 +75,21 @@ public class StationsController : ControllerBase
     public ActionResult<TrainStationDto> UpdateStation(int id, TrainStationDto dto)
     {
         if (IsInvalid(dto))
+        {
+            return BadRequest();
+        }
+
+        if (dto.Name == null || dto.Name == "")
+        {
+            return BadRequest();
+        }
+
+        if (dto.Address == null || dto.Address == "")
+        {
+            return BadRequest();
+        }
+
+        if (dto.Name.Length > 120)
         {
             return BadRequest();
         }
