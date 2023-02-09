@@ -6,7 +6,7 @@ namespace SP23.P02.Web.Features.Auth
 
     public class User : IdentityUser<int>
     {
-
+        public virtual ICollection<UserRole> Roles { get; set; }
     }
 
     public class UserDto
